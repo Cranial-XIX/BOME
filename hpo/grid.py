@@ -7,7 +7,6 @@ os.system("mkdir -p ./trainlogs/")
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset', type=str, default="mnist", choices=["mnist", "fashion", "l2reg"])
 parser.add_argument('--alg', type=str)
-parser.add_argument('--seed', type=int, default=1)
 args = parser.parse_args()
 
 
