@@ -73,7 +73,7 @@ else:
     seeds = [1,2,3,4,5]
 
     for seed in seeds:
-        u1 = 0.5
+        u1 = 1e-4 # 1e-4, 5e-4, 9e-4
         alg = "BOME"
         for iterations, w_lr in zip(iterations_list, [100.0, 100.0, 100.0, 100.0]):
             os.system(f"python l2reg.py --alg {alg} --seed {seed} --iterations {iterations} --x_lr {x_lr} --w_lr {w_lr} --xhat_lr {xhat_lr} --u1 {u1} > trainlogs/l2reg_{alg}u1{u1}_{iterations}_xlr{x_lr}_w{w_lr}_xhatlr{xhat_lr}_{seed}.log")
